@@ -32,4 +32,47 @@ Status: Downloaded newer image for ubuntu:latest
 [?2004l[?2004h]0;root@aa7f9bf22983: /root@aa7f9bf22983:/# touch /usr/src/app/index.js
 [?2004l[?2004h]0;root@aa7f9bf22983: /root@aa7f9bf22983:/# [Kexit
 [?2004lexit
-]0;ducanhle@DucAnh-sLaptop: /mnt/c/Users/alexd/Desktop/part12-containers-applications[01;32mduc
+]0;ducanhle@DucAnh-sLaptop: /mnt/c/Users/alexd/Desktop/part12-containers-applications[01;32mducanhle@DucAnh-sLaptop[00m:[01;34m/mnt/c/Users/alexd/Desktop/part12-containers-applications[00m$ docker container run --rm ubuntu ls
+bin
+boot
+dev
+etc
+home
+lib
+lib32
+lib64
+libx32
+media
+mnt
+opt
+proc
+root
+run
+sbin
+srv
+sys
+tmp
+usr
+var
+]0;ducanhle@DucAnh-sLaptop: /mnt/c/Users/alexd/Desktop/part12-containers-applications[01;32mducanhle@DucAnh-sLaptop[00m:[01;34m/mnt/c/Users/alexd/Desktop/part12-containers-applications[00m$ docker container ls -a
+CONTAINER ID   IMAGE         COMMAND    CREATED          STATUS                      PORTS     NAMES
+aa7f9bf22983   ubuntu        "bash"     9 minutes ago    Exited (0) 5 minutes ago              tender_blackwell
+b6b1d33a03d7   hello-world   "/hello"   10 minutes ago   Exited (0) 10 minutes ago             reverent_moore
+5165a1f299cf   hello-world   "/hello"   26 minutes ago   Exited (0) 26 minutes ago             recursing_zhukovsky
+]0;ducanhle@DucAnh-sLaptop: /mnt/c/Users/alexd/Desktop/part12-containers-applications[01;32mducanhle@DucAnh-sLaptop[00m:[01;34m/mnt/c/Users/alexd/Desktop/part12-containers-applications[00m$ docker start tender_blackwell
+tender_blackwell
+]0;ducanhle@DucAnh-sLaptop: /mnt/c/Users/alexd/Desktop/part12-containers-applications[01;32mducanhle@DucAnh-sLaptop[00m:[01;34m/mnt/c/Users/alexd/Desktop/part12-containers-applications[00m$ docker container ls -a
+CONTAINER ID   IMAGE         COMMAND    CREATED          STATUS                      PORTS     NAMES
+aa7f9bf22983   ubuntu        "bash"     10 minutes ago   Up 33 seconds                         tender_blackwell
+b6b1d33a03d7   hello-world   "/hello"   12 minutes ago   Exited (0) 12 minutes ago             reverent_moore
+5165a1f299cf   hello-world   "/hello"   27 minutes ago   Exited (0) 27 minutes ago             recursing_zhukovsky
+]0;ducanhle@DucAnh-sLaptop: /mnt/c/Users/alexd/Desktop/part12-containers-applications[01;32mducanhle@DucAnh-sLaptop[00m:[01;34m/mnt/c/Users/alexd/Desktop/part12-containers-applications[00m$ docker container ls
+CONTAINER ID   IMAGE     COMMAND   CREATED          STATUS          PORTS     NAMES
+aa7f9bf22983   ubuntu    "bash"    11 minutes ago   Up 40 seconds             tender_blackwell
+]0;ducanhle@DucAnh-sLaptop: /mnt/c/Users/alexd/Desktop/part12-containers-applications[01;32mducanhle@DucAnh-sLaptop[00m:[01;34m/mnt/c/Users/alexd/Desktop/part12-containers-applications[00m$ docker kill tender_blackwell
+tender_blackwell
+]0;ducanhle@DucAnh-sLaptop: /mnt/c/Users/alexd/Desktop/part12-containers-applications[01;32mducanhle@DucAnh-sLaptop[00m:[01;34m/mnt/c/Users/alexd/Desktop/part12-containers-applications[00m$ docker kill tender_blackwell[9Pcontainer ls -a
+CONTAINER ID   IMAGE         COMMAND    CREATED          STATUS                        PORTS     NAMES
+aa7f9bf22983   ubuntu        "bash"     11 minutes ago   Exited (137) 26 seconds ago             tender_blackwell
+b6b1d33a03d7   hello-world   "/hello"   12 minutes ago   Exited (0) 12 minutes ago               reverent_moore
+5165a1f29
