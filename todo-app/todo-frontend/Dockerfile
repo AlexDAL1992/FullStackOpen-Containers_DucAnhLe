@@ -1,4 +1,4 @@
-FROM node:latest AS build-stage
+FROM node:16
 
 WORKDIR /usr/src/app
 
@@ -8,6 +8,6 @@ RUN npm ci
 
 RUN npm run build
 
-FROM nginx:latest
+RUN npm install -g serve
 
-COPY --from=build-stage /usr/src/app/build /usr/share/nginx/html
+CMD ["serve", "build"]
